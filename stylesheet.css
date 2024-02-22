@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: lightgrey;
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 150vh;
+    display: grid;
+    place-content: center;
+}
+img, svg{
+    max-width: 100%;
+    display: block;
+}
+button{
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: 0;
+}
+button:hover{
+    color: purple;
+}
+.content{
+    background-color: white;
+    max-width: 800px;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.image{
+    display: flex;
+    gap: 2rem;
+}
+.image h1{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-section, .sub-section:not(:last-child){
+    border-bottom: 2px solid lightgrey;
+}
+.icons img{
+    min-width: 30px;
+}
+.icons .minus{
+    display: flex;
+}
+.hidden{
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+.hidden{
+    display: none;
+}
+.description{
+    font-size: 1.1rem;
+    padding: 1rem;
+    color: purple;
+}
+@media (max-width: 540px){
+    body{
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+}
